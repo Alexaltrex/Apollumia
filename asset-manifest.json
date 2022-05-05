@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Apollumia/static/css/main.ca61b8e5.css",
+    "main.js": "/Apollumia/static/js/main.33e409de.js",
+    "static/js/787.b065b0f7.chunk.js": "/Apollumia/static/js/787.b065b0f7.chunk.js",
+    "static/media/slide0.png": "/Apollumia/static/media/slide0.229d162de7b22f688ddc.png",
+    "static/media/slide1.png": "/Apollumia/static/media/slide1.1f642773c4cd88033eba.png",
+    "static/media/src2.png": "/Apollumia/static/media/src2.780ae7ef5475e507263d.png",
+    "static/media/src0.png": "/Apollumia/static/media/src0.2d5e8df7fe264f403e9f.png",
+    "static/media/src1.png": "/Apollumia/static/media/src1.aba47152a491ea8d47f9.png",
+    "static/media/src3.png": "/Apollumia/static/media/src3.c831a3d362bbe2cc4fe1.png",
+    "static/media/src4.png": "/Apollumia/static/media/src4.8a86bd6d5f1f21cb98bd.png",
+    "static/media/slide2.png": "/Apollumia/static/media/slide2.1f2bc74a382bcdf1506c.png",
+    "static/media/slide4.png": "/Apollumia/static/media/slide4.4c679eaab2cb1e6cf2ad.png",
+    "static/media/frame.png": "/Apollumia/static/media/frame.5442c2bafc81fd9de0f3.png",
+    "static/media/slide3.png": "/Apollumia/static/media/slide3.66be961dd7c6ed491aa8.png",
+    "static/media/readTheComics.png": "/Apollumia/static/media/readTheComics.6ec044b64aab7d4bdb1a.png",
+    "index.html": "/Apollumia/index.html",
+    "main.ca61b8e5.css.map": "/Apollumia/static/css/main.ca61b8e5.css.map",
+    "main.33e409de.js.map": "/Apollumia/static/js/main.33e409de.js.map",
+    "787.b065b0f7.chunk.js.map": "/Apollumia/static/js/787.b065b0f7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca61b8e5.css",
+    "static/js/main.33e409de.js"
+  ]
+}
