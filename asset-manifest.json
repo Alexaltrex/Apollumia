@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Apollumia/static/css/main.edcf0a60.css",
-    "main.js": "/Apollumia/static/js/main.9f2a2162.js",
+    "main.css": "/Apollumia/static/css/main.d253f5d9.css",
+    "main.js": "/Apollumia/static/js/main.1f9dcc5d.js",
     "static/js/787.b065b0f7.chunk.js": "/Apollumia/static/js/787.b065b0f7.chunk.js",
     "static/media/src0.png": "/Apollumia/static/media/src0.780ae7ef5475e507263d.png",
     "static/media/src1.png": "/Apollumia/static/media/src1.073bf59144674a9388da.png",
@@ -17,12 +17,12 @@
     "static/media/slide3.png": "/Apollumia/static/media/slide3.66be961dd7c6ed491aa8.png",
     "static/media/readTheComics.png": "/Apollumia/static/media/readTheComics.6ec044b64aab7d4bdb1a.png",
     "index.html": "/Apollumia/index.html",
-    "main.edcf0a60.css.map": "/Apollumia/static/css/main.edcf0a60.css.map",
-    "main.9f2a2162.js.map": "/Apollumia/static/js/main.9f2a2162.js.map",
+    "main.d253f5d9.css.map": "/Apollumia/static/css/main.d253f5d9.css.map",
+    "main.1f9dcc5d.js.map": "/Apollumia/static/js/main.1f9dcc5d.js.map",
     "787.b065b0f7.chunk.js.map": "/Apollumia/static/js/787.b065b0f7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.edcf0a60.css",
-    "static/js/main.9f2a2162.js"
+    "static/css/main.d253f5d9.css",
+    "static/js/main.1f9dcc5d.js"
   ]
 }
