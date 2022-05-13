@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Apollumia/static/css/main.a38b1829.css",
-    "main.js": "/Apollumia/static/js/main.c4dcbac5.js",
+    "main.css": "/Apollumia/static/css/main.63ac745d.css",
+    "main.js": "/Apollumia/static/js/main.13ea0127.js",
     "static/js/787.b065b0f7.chunk.js": "/Apollumia/static/js/787.b065b0f7.chunk.js",
     "static/media/Loop_Smooth.wav": "/Apollumia/static/media/Loop_Smooth.b7dab5fe49d3e5b6df9a.wav",
     "static/media/03.jpg": "/Apollumia/static/media/03.51b45d8b20eb90ad5680.jpg",
@@ -27,12 +27,12 @@
     "static/media/slide3.png": "/Apollumia/static/media/slide3.43b6ae63cdaa4ee23a62.png",
     "static/media/src3.jpg": "/Apollumia/static/media/src3.30a8172dda3479f8bf03.jpg",
     "index.html": "/Apollumia/index.html",
-    "main.a38b1829.css.map": "/Apollumia/static/css/main.a38b1829.css.map",
-    "main.c4dcbac5.js.map": "/Apollumia/static/js/main.c4dcbac5.js.map",
+    "main.63ac745d.css.map": "/Apollumia/static/css/main.63ac745d.css.map",
+    "main.13ea0127.js.map": "/Apollumia/static/js/main.13ea0127.js.map",
     "787.b065b0f7.chunk.js.map": "/Apollumia/static/js/787.b065b0f7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a38b1829.css",
-    "static/js/main.c4dcbac5.js"
+    "static/css/main.63ac745d.css",
+    "static/js/main.13ea0127.js"
   ]
 }
