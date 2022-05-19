@@ -1,0 +1,98 @@
+@import "../../../assets/scss/app";
+
+.buttonEllipse {
+  @include button();
+  position: relative;
+
+  &:hover {
+
+    .filledArea .circle {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+    .label {
+      color: #000;
+    }
+
+    .rotateArea {
+      transform: translate(-50%, -50%) rotate(-11deg);
+    }
+
+  }
+
+  .label {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFF;
+    transition: 0.3s;
+    white-space: nowrap;
+
+    @include desktop() {
+      font-size: vwD(12);
+      line-height: vwD(14);
+    }
+  }
+
+  .filledArea {
+    position: relative;
+    z-index: 2;
+    width: 149px;
+    height: 48px;
+    border: 1px solid #FFF;
+    box-sizing: border-box;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include desktop() {
+      width: vwD(149);
+      height: vwD(48);
+      border: vwD(1) solid #FFF;
+    }
+
+    .circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: #FFF;
+      transition: 0.3s;
+
+      @include desktop() {
+        width: vwD(150);
+        height: vwD(150);
+      }
+    }
+  }
+
+  .rotateArea {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-20deg);
+    width: 149px;
+    height: 48px;
+    border: 1px solid #424242;
+    border-radius: 50%;
+    transition: 0.3s;
+
+    @include desktop() {
+      width: vwD(149);
+      height: vwD(48);
+      border-width: vwD(1);
+    }
+  }
+}

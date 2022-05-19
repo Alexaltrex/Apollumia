@@ -1,0 +1,234 @@
+@import "../../assets/scss/app";
+
+.factions {
+  position: relative;
+  overflow: hidden;
+  border-bottom: $headerBorder;
+
+  .mobileSwiper {
+    @include onlyMobile();
+
+    .swiper {
+
+      .slide {
+        position: relative;
+        width: 252px;
+        height: 582px;
+        border-right: $headerBorder;
+        border-left: $headerBorder;
+
+        .img {
+          position: absolute;
+          z-index: 1;
+          top: 52px;
+          left: 20px;
+          width: 188px;
+          height: 434px;
+          filter: grayscale(1);
+          transition: 0.3s;
+
+          &_small {
+            top: 72px;
+          }
+        }
+
+        .content {
+          position: relative;
+          z-index: 3;
+          width: 100%;
+          height: 100%;
+          box-sizing: border-box;
+          padding: 254px 20px 62px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .title {
+            @include Federo();
+            font-size: 20px;
+            line-height: 130%;
+            text-transform: uppercase;
+          }
+
+          .description {
+            margin-top: 15px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 160%;
+          }
+
+          .beliefs {
+            @include cursiveDescription();
+          }
+
+          .beliefsItems {
+            margin-top: 8px;
+            display: flex;
+            flex-wrap: wrap;
+
+            p {
+              font-size: 14px;
+              line-height: 150%;
+
+              &:nth-child(2) {
+                margin-left: 20px;
+              }
+
+              &:nth-child(3) {
+                width: 100%;
+                margin-top: 6px;
+              }
+            }
+          }
+
+        }
+
+        &_active {
+          .img {
+            filter: grayscale(0);
+          }
+        }
+
+      }
+    }
+  }
+
+  .cardsDesktop {
+    @include onlyDesktop(flex);
+
+    .card {
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      box-sizing: border-box;
+      border-right: $headerBorder;
+      width: vwD(180);
+      height: vwD(542);
+      transition: 0.6s;
+
+      .cardInner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: vwD(720);
+        height: vwD(542);
+        padding: vwD(60) vwD(60) vwD(45) vwD(356);
+        box-sizing: border-box;
+
+        .img {
+          position: absolute;
+          top: vwD(21);
+          left: vwD(69);
+          width: vwD(225);
+          height: vwD(517);
+          filter: grayscale(1);
+          transition: 0.6s;
+        }
+
+        .content {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .title {
+            @include Federo();
+            font-size: vwD(40);
+            line-height: 130%;
+            text-transform: uppercase;
+          }
+
+          .description {
+            margin-top: vwD(20);
+            font-weight: 300;
+            font-size: vwD(15);
+            line-height: 160%;
+          }
+
+          .bottomBlock {
+            position: relative;
+            height: vwD(206);
+
+            .beliefs {
+              @include cursiveDescription();
+            }
+
+            .beliefsItems {
+              position: absolute;
+              top: 0;
+              left: 0;
+
+              .item {
+                position: absolute;
+
+                p {
+                  @include absoluteCenter();
+                  font-size: vwD(15);
+                  line-height: 150%;
+                }
+
+                &:nth-child(1) {
+                  left: vwD(122);
+                  top: 0;
+                  width: vwD(120);
+                  height: vwD(120);
+                }
+
+                &:nth-child(2) {
+                  left: 0;
+                  top: vwD(43);
+                  width: vwD(100);
+                  height: vwD(100);
+                }
+
+                &:nth-child(3) {
+                  left: vwD(86);
+                  top: vwD(116);
+                  width: vwD(90);
+                  height: vwD(90);
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      &:nth-child(1) .cardInner img {
+        top: vwD(50);
+        height: vwD(490);
+        width: auto;
+      }
+
+
+      &:nth-child(2) .cardInner img {
+        top: vwD(0);
+        height: vwD(547);
+        width: auto;
+      }
+
+      &:last-child .cardInner img {
+        top: vwD(25);
+        left: vwD(13);
+        width: vwD(250);
+        height: auto;
+      }
+
+
+      &_open {
+        width: vwD(720);
+
+        .cardInner .img {
+          filter: grayscale(0);
+        }
+      }
+
+    }
+  }
+
+}

@@ -1,0 +1,64 @@
+@import "../../assets/scss/app";
+
+.theBrokenWorld {
+  padding-bottom: 60px;
+
+  @include desktop() {
+    padding-bottom: vwD(120);
+  }
+
+
+  .description {
+    @include description();
+    padding: 60px 20px 50px;
+
+    @include desktop() {
+      padding: vwD(60) 0;
+      width: vwD(834);
+      margin: 0 auto;
+    }
+  }
+
+  .swiperBlock {
+
+    .swiper {
+      margin-top: 30px;
+
+      @include desktop() {
+        margin-top: vwD(50);
+      }
+
+      .slide {
+        width: 252px;
+        height: 138px;
+
+        @include desktop() {
+          width: vwD(1020);
+          height: vwD(560);
+        }
+
+        img {
+          display: block;
+          width: 252px;
+          height: 138px;
+
+          @include desktop() {
+            width: vwD(1020);
+            height: vwD(560);
+          }
+        }
+      }
+    }
+
+    .control {
+      @include centerColumn();
+      margin-top: 30px;
+
+      @include desktop() {
+        margin-top: vwD(50)
+      }
+    }
+
+  }
+
+}

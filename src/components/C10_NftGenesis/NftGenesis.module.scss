@@ -1,0 +1,251 @@
+@import "../../assets/scss/app";
+
+.nftGenesis {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  @include desktop() {
+    height: vwD(750);
+    flex-direction: row-reverse;
+  }
+
+  .gradientMask {
+    @include onlyDesktop();
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5000px;
+    height: 5000px;
+    background: radial-gradient(
+                    rgba(0,0,0,0) 0%,
+                    rgba(0,0,0,1.0) 360px,
+                    rgba(0,0,0,1) 100%
+    );
+    transition: 0.3s;
+  }
+
+  .sliderBlock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0 40px;
+
+    @include desktop() {
+      width: 50%;
+      padding: vwD(90) 0 0;
+      border-left: $headerBorder;
+    }
+
+    .countInfo {
+      @include onlyDesktop(flex) ;
+    }
+
+    .swiper {
+      position: relative;
+      z-index: 5;
+      padding: 0 2px;
+      box-sizing: border-box;
+      width: 100%;
+
+      @include desktop() {
+        margin-top: vwD(73);
+        padding: 0 vwD(2);
+      }
+
+      .slide {
+        @include centerRow();
+        width: 205px;
+        height: 202px;
+
+        @include desktop() {
+          width: vwD(396);
+          height: vwD(389);
+        }
+
+        img {
+          display: block;
+          width: 205px;
+          height: 202px;
+          transform: scale(0.82);
+          filter: grayscale(1);
+          transition: 0.3s;
+
+          @include desktop() {
+            width: vwD(396);
+            height: vwD(389);
+          }
+        }
+
+        &_active img {
+          transform: scale(1);
+          filter: grayscale(0);
+        }
+      }
+    }
+
+    .border {
+      position: absolute;
+      z-index: 2;
+      width: 210px;
+      height: 210px;
+      border: 1px solid #303030;
+      transform: rotate(15deg);
+
+      @include desktop() {
+        top: vwD(165);
+        width: vwD(410);
+        height: vwD(410);
+      }
+    }
+
+    .gradient {
+      @include onlyDesktop();
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      left: 0;
+      height: 0.80 * 27.01389vw;
+      width: vwD(90);
+      transform: translate(0, -50%);
+      background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    }
+
+
+    .frame {
+      position: absolute;
+      z-index: 10;
+      width: 230px;
+      height: 230px;
+      left: 50%;
+      top: 48px;
+      transform: translate(-50%, 0);
+
+      @include desktop() {
+        width: vwD(444);
+        height: vwD(444);
+        top: vwD(152);
+      }
+    }
+
+    .control {
+      margin-top: 38px;
+
+      @include desktop() {
+        margin-top: vwD(73);
+      }
+    }
+
+  }
+
+  .titleBlock {
+    position: relative;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktop() {
+      padding: vwD(68) 0 0;
+      width: 50%;
+      //border-right: $headerBorder;
+      box-sizing: border-box;
+    }
+
+
+    .icon {
+      width: vwD(100);
+      height: vwD(100);
+
+      svg {
+        width: vwD(100);
+        height: vwD(100);
+
+        circle {
+          transition: 0.3s;
+          stroke-dasharray: 0 628;
+        }
+      }
+
+      &:hover {
+        svg circle {
+          stroke: green;
+          stroke-dasharray: 628 0;
+        }
+      }
+    }
+
+    .customCircle {
+      width: 300px;
+      height: 300px;
+    }
+
+    .titleMobile {
+      @include onlyMobile();
+      @include Federo();
+      font-size: 45px;
+      line-height: 94%;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .titleDesktop {
+      @include onlyDesktop();
+      position: relative;
+
+      p {
+        @include Federo();
+        font-size: vwD(114);
+        line-height: vwD(134);
+        text-align: center;
+        text-transform: uppercase;
+
+        &:nth-child(2) {
+          font-size: vwD(150);
+          line-height: 94%;
+          margin-top: vwD(59);
+          width: vwD(215);
+          word-wrap: break-word;
+        }
+      }
+
+    }
+
+    .description {
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 160%;
+      text-align: center;
+      color: #A5A5A5;
+
+      span {
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      @include desktop() {
+        font-size: vwD(15);
+        width: vwD(222);
+        position: absolute;
+        top: vwD(178);
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    .mintBtn {
+      margin-top: 39px;
+
+      @include desktop() {
+        margin-top: 0;
+        position: absolute;
+        right: vwD(68);
+        bottom: vwD(94);
+      }
+    }
+
+
+  }
+}

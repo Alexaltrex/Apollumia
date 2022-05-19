@@ -1,0 +1,54 @@
+@import "../../../assets/scss/app";
+
+.swiperControl {
+  display: flex;
+  align-items: center;
+
+  .divider {
+    width: 1px;
+    height: 15px;
+    background: #484848;
+    margin: 0 15px;
+
+    @include desktop() {
+      width: vwD(1);
+      height: vwD(15);
+      margin: 0 vwD(20);
+    }
+  }
+
+  .btn {
+    @include button();
+    width: 20px;
+    height: 20px;
+
+    @include desktop() {
+      width: vwD(24);
+      height: vwD(24);
+    }
+
+    &:hover {
+      svg path {
+        fill: $colorHover;
+      }
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+
+      path {
+        transition: 0.3s;
+      }
+
+      @include desktop() {
+        width: vwD(24);
+        height: vwD(24);
+      }
+    }
+
+    &:disabled svg path {
+      fill: #555555;
+    }
+  }
+}

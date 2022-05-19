@@ -1,0 +1,44 @@
+@import "../../assets/scss/app";
+
+.theGame {
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+
+    @include desktop() {
+      padding: vwD(60) 0 vwD(120);
+    }
+
+    .description {
+      @include description();
+      max-width: 600px;
+
+      @include desktop() {
+        width: vwD(910);
+        max-width: 100%;
+      }
+    }
+
+    .btn {
+      margin-top:45px;
+
+      @include desktop() {
+        margin-top: vwD(73);
+      }
+    }
+
+    .cursive {
+      @include cursiveDescription();
+      margin-top: 37px;
+
+      @include desktop() {
+        margin-top: vwD(29);
+      }
+
+    }
+  }
+
+}

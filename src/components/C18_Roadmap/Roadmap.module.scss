@@ -1,0 +1,125 @@
+@import "../../assets/scss/app";
+
+.roadmap {
+
+  .content {
+
+    .item {
+      cursor: pointer;
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 60px;
+
+      @include desktop() {
+        height: vwD(113);
+      }
+
+      .inner {
+        @include absoluteStart();
+        background-color: #000;
+        transition: 0.3s;
+        padding: 0 20px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include desktop() {
+          padding: 0 vwD(120);
+        }
+
+        .leftBlock {
+          font-size: 14px;
+          line-height: 130%;
+          font-weight: 300;
+
+          @include desktop() {
+            font-size: vwD(20);
+          }
+
+          //span:nth-child(1) {
+          //  font-weight: 300;
+          //}
+          //
+          //span:nth-child(2) {
+          //  font-weight: 400;
+          //  font-style: italic;
+          //}
+
+
+        }
+
+        .titleBlock {
+          @include absoluteCenter();
+          font-size: 14px;
+          line-height: 130%;
+          font-weight: 300;
+
+          @include desktop() {
+            font-size: vwD(20);
+          }
+
+          span {
+            font-weight: 400;
+            font-style: italic;
+          }
+
+        }
+
+
+        .iconBlock {
+          width: 20px;
+          height: 20px;
+          box-sizing: border-box;
+          border-radius: 50%;
+          @include centerRow();
+
+          @include desktop() {
+            width: vwD(40);
+            height: vwD(40);
+          }
+
+          background-color: #0A0A0A;
+          border: 1px solid #303030;
+
+          svg {
+            width: 6px;
+            height: 6px;
+
+            @include desktop() {
+              width: vwD(12);
+              height: vwD(12);
+            }
+          }
+
+          &_done {
+            background-color: #FFF;
+            border: 1px solid #FFF;
+
+            svg {
+              width: 7.25px;
+              height: 4.71px;
+
+              @include desktop() {
+                width: vwD(14.87);
+                height: vwD(9.65);
+              }
+            }
+          }
+        }
+
+      }
+
+      &:hover {
+        .inner {
+          background-color: transparent;
+        }
+      }
+
+
+    }
+  }
+
+}

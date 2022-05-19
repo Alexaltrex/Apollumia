@@ -1,0 +1,231 @@
+@import "../../assets/scss/app";
+
+.header {
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 100;
+  border-bottom: 1px solid #303030;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include desktop() {
+    height: vwD(72);
+    padding: 0 vwD(30);
+  }
+
+  &_scroll {
+    box-shadow: 0px 10px 80px 20px rgba(0, 0, 0, 0.6);
+  }
+
+  .playerWrapper {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    .player {
+      width: 0;
+      height: 0;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+  }
+
+
+  .logoMobile {
+    @include onlyMobile() {
+      text-decoration: none;
+      width: 174px;
+      height: 13px;
+
+      svg {
+        width: 174px;
+        height: 13px;
+      }
+    }
+  }
+
+  .burgerBtnMobile {
+    @include onlyMobile() {
+      @include button();
+      width: 28px;
+      height: 28px;
+
+      svg {
+        width: 28px;
+        height: 28px;
+      }
+
+    }
+  }
+
+  .leftDesktop {
+    @include onlyDesktop(flex) {
+      height: 100%;
+      display: flex;
+    }
+
+    .burgerBlock {
+      display: flex;
+      align-items: center;
+      padding-right: vwD(27);
+      border-right: $headerBorder;
+
+      &:hover {
+        p {
+          color: $colorHover;
+        }
+
+        .burgerBtnDesktop svg {
+          path {
+            fill: $colorHover;
+          }
+          circle {
+            stroke: $colorHover;
+          }
+
+        }
+
+      }
+
+      .burgerBtnDesktop {
+        @include button();
+        width: vwD(30);
+        height: vwD(30);
+
+        svg {
+          width: vwD(30);
+          height: vwD(30);
+
+          path, circle {
+            transition: 0.3s;
+          }
+        }
+      }
+
+      p {
+        cursor: pointer;
+        user-select: none;
+        margin-left: vwD(10);
+        font-size: vwD(13);
+        line-height: vwD(16);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        transition: 0.3s;
+      }
+
+    }
+
+    .soundBlock {
+      display: flex;
+      align-items: center;
+      border-right: $headerBorder;
+      padding: 0 vwD(30);
+
+      .soundIcon {
+        cursor: pointer;
+        width: vwD(18);
+        height: vwD(19);
+        margin-right: vwD(14);
+
+        svg {
+          width: vwD(18);
+          height: vwD(19);
+        }
+      }
+
+      .btn {
+        @include button();
+        font-size: vwD(13);
+        line-height: vwD(16);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(85, 85, 85, 1);
+        transition: 0.3s;
+
+        &_active {
+          color: #FFF;
+        }
+
+        &:hover {
+          color: $colorHover;
+        }
+
+      }
+
+      .divider {
+        width: vwD(1);
+        height: vwD(14);
+        background: #484848;
+        margin: 0 vwD(8);
+      }
+
+    }
+
+  }
+
+  .logoDesktop {
+
+    @include onlyDesktop() {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: vwD(257);
+      height: vwD(17);
+
+      svg {
+        width: vwD(257);
+        height: vwD(17);
+      }
+    }
+
+  }
+
+  .rightDesktop {
+    @include onlyDesktop(flex) {
+      height: 100%;
+      padding-left: vwD(30);
+      border-left: $headerBorder;
+      display: flex;
+      align-items: center;
+    }
+
+    .link {
+      width: vwD(20);
+      height: vwD(20);
+
+      svg {
+        width: vwD(20);
+        height: vwD(20);
+
+        path {
+          transition: 0.3s;
+        }
+      }
+
+      &:not(:first-child) {
+        margin-left: vwD(20);
+      }
+
+      &:hover {
+        svg path {
+          stroke: $colorHover;
+        }
+      }
+
+    }
+  }
+}

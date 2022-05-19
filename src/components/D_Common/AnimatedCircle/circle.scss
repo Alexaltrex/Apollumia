@@ -1,0 +1,19 @@
+.animCircle {
+  cursor: pointer;
+
+  svg:nth-child(2) circle {
+    animation-name: turn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes turn {
+  from {
+    stroke-dasharray: 0 628;
+  }
+  to {
+    stroke-dasharray: 628 0;
+  }
+}

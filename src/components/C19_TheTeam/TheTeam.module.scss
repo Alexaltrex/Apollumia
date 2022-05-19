@@ -1,0 +1,132 @@
+@import "../../assets/scss/app";
+
+.theTeam {
+  position: relative;
+
+  .anchor {
+    position: absolute;
+    left: 0;
+    top: -56px;
+
+    @include desktop {
+      top: vwD(-72);
+    }
+
+
+  }
+
+  .content {
+    padding: 30px 20px 60px;
+
+    @include desktop() {
+      padding: vwD(60) vwD(120) vwD(190);
+    }
+
+    .description {
+      @include description();
+      max-width: 600px;
+      margin: 0 auto;
+
+      @include desktop() {
+        max-width: 100%;
+        width: vwD(874);
+      }
+    }
+
+
+    .team {
+      width: 200px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      grid-row-gap: 40px;
+
+
+      @include desktop() {
+        width: auto;
+        margin: vwD(100) 0 0;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        grid-row-gap: vwD(60);
+        grid-column-gap: vwD(50);
+      }
+
+      .item {
+
+        img {
+          display: block;
+          margin: 0 auto;
+          width: 200px;
+          height: auto;
+
+          @include desktop() {
+            width: vwD(200);
+          }
+        }
+
+        .infoBlock {
+          margin: 16px auto 0;
+
+          @include desktop() {
+            margin: vwD(20) auto 0;
+          }
+
+          .topRow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            a {
+              text-decoration: none;
+
+              svg {
+                width: 18px;
+                height: 18px;
+
+                path {
+                  transition: 0.3s;
+                }
+
+                @include desktop() {
+                  width: vwD(18);
+                  height: vwD(18);
+                }
+              }
+
+              &:hover {
+                svg path {
+                  stroke: $colorHover;
+                }
+              }
+            }
+
+            .name {
+              font-size: 16px;
+              line-height: 19px;
+
+              @include desktop() {
+                font-size: vwD(16);
+                line-height: vwD(19);
+              }
+            }
+          }
+
+          .job {
+            margin-top: 4px;
+            color: #A5A5A5;
+            font-size: 13px;
+            line-height: 160%;
+
+            @include desktop() {
+              margin-top: vwD(6);
+            }
+          }
+
+        }
+      }
+
+    }
+
+  }
+
+}

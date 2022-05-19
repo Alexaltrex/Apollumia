@@ -1,0 +1,35 @@
+@import "../../../assets/scss/app";
+
+.countInfo {
+  @include centerRow();
+
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+
+    @include desktop() {
+      font-size: vwD(18);
+      line-height: vwD(22);
+    }
+
+    &:last-child {
+      color: #555555;
+    }
+
+  }
+
+  .divider {
+    width: 1px;
+    height: 12px;
+    background: #484848;
+    margin: 0 15px;
+
+    @include desktop() {
+      width: vwD(1);
+      height: vwD(16);
+      margin: 0 vwD(15);
+    }
+  }
+
+}

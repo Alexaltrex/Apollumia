@@ -1,0 +1,107 @@
+@mixin mobile375 {
+  @media all and (min-width: 375px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media all and (min-width: 834px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media all and (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin onlyMobile($displayType: block) {
+  display: $displayType;
+  @content;
+
+  @include desktop() {
+    display: none;
+  }
+}
+
+@mixin onlyDesktop($displayType: block) {
+  display: none;
+
+  @include desktop {
+    display: $displayType;
+    @content;
+  }
+}
+
+@mixin centerColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin centerRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button() {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+@mixin Federo() {
+  font-family: 'Federo', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin description() {
+  text-align: center;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 130%;
+  color: #A5A5A5;
+
+  @include desktop() {
+    font-size: vwD(36);
+  }
+
+  & > span {
+    font-weight: 400;
+    font-style: italic;
+    color: #FFF;
+  }
+}
+
+@mixin cursiveDescription() {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.1em;
+  color: #A5A5A5;
+
+  @include desktop() {
+    font-size: vwD(14);
+  }
+}
+
+@mixin absoluteCenter() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin absoluteStart() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}

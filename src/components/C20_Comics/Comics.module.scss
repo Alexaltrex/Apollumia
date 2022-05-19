@@ -1,0 +1,156 @@
+@import "../../assets/scss/app";
+
+.comics {
+  overflow: hidden;
+
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 0 100px;
+
+    @include desktop() {
+      height: vwD(790);
+      padding: vwD(60) 0 0;
+    }
+
+    .swiperWrapper {
+      position: relative;
+      margin-top: 50px;
+
+      @include mobile375() {
+        margin-top: 55px;
+      }
+
+      @include tablet() {
+        margin-top: 85px;
+      }
+
+      @include desktop() {
+        margin-top: vwD(85);
+      }
+
+      .swiper {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+
+        .slide {
+          @include centerRow();
+          cursor: pointer;
+          width: 185px;
+          height: 182px;
+
+          @include mobile375() {
+            width: 208px;
+            height: 224px;
+          }
+
+          @include tablet() {
+            width: 468px;
+            height: 376px;
+          }
+
+          @include desktop() {
+            width: vwD(468);
+            height: vwD(376);
+          }
+
+          img {
+            display: block;
+            width: 80px;
+            height: 123px;
+            filter: grayscale(1);
+            transition: 0.3s;
+
+            @include tablet() {
+              width: 182px;
+              height: 280px;
+            }
+
+            @include desktop() {
+              width: vwD(182);
+              height: vwD(280);
+            }
+          }
+
+          &_active {
+            img {
+              filter: grayscale(0);
+              width: 119px;
+              height: 183px;
+
+              @include mobile375() {
+                width: 145px;
+                height: 224px;
+              }
+
+              @include tablet() {
+                width: 243px;
+                height: 376px;
+              }
+
+              @include desktop() {
+                width: vwD(243);
+                height: vwD(376);
+              }
+
+            }
+          }
+        }
+      }
+
+      .frameIcon {
+        position: absolute;
+        z-index: 5;
+        left: 50%;
+        top: calc(50% + 16px);
+        transform: translate(-50%, -50%);
+
+        @include mobile375() {
+          top: calc(50% + 20px);
+        }
+
+        @include tablet() {
+          top: calc(50% + 30px);
+        }
+
+        @include desktop() {
+          top: calc(50% + 2.1vw);
+        }
+
+        svg {
+          width: 710px;
+
+          @include mobile375() {
+            width: 840px;
+          }
+
+          @include tablet() {
+            width: 1435px;
+          }
+
+          @include desktop() {
+            width: auto;
+            height: vwD(800);
+          }
+
+
+        }
+      }
+    }
+
+    .control {
+      margin-top: 77px;
+      position: relative;
+      z-index: 10;
+
+      @include desktop() {
+        margin-top: vwD(96);
+      }
+    }
+
+  }
+}

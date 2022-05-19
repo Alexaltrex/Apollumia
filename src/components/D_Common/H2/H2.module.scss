@@ -1,0 +1,25 @@
+@import "../../../assets/scss/app";
+
+.h2 {
+  box-sizing: border-box;
+  @include centerColumn();
+  border-top: $headerBorder;
+  border-bottom: $headerBorder;
+  height: 86px;
+
+
+  @include desktop() {
+    height: vwD(142);
+  }
+
+  p {
+    @include Federo();
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 130%;
+
+    @include desktop() {
+      font-size: vwD(24);
+    }
+  }
+}

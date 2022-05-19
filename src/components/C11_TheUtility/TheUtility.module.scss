@@ -1,0 +1,191 @@
+@import "../../assets/scss/app";
+
+.theUtility {
+  position: relative;
+  overflow: hidden;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px;
+
+    @include desktop() {
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      height: vwD(570);
+    }
+
+    .textBlock {
+      @include centerColumn();
+
+      @include desktop() {
+        height: 100%;
+
+        border-right: $headerBorder;
+      }
+
+      & > p {
+        @include description();
+        max-width: 600px;
+
+        @include desktop() {
+          max-width: 100%;
+          width: vwD(464);
+        }
+      }
+    }
+
+    .circleBlock {
+      display: flex;
+      flex-direction: column;
+      padding: 40px 0 60px;
+      box-sizing: border-box;
+      width: 280px;
+      margin: 0 auto;
+
+      @include desktop() {
+        width: 100%;
+        margin: 0;
+        padding: vwD(100) vwD(120) 0px vwD(85);
+      }
+
+      .circleBox {
+        position: relative;
+
+        .text {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 14px;
+          line-height: 150%;
+          text-align: center;
+
+          @include desktop() {
+            font-size: vwD(15);
+          }
+        }
+
+        .step {
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 17px;
+          letter-spacing: 0.1em;
+
+          @include desktop() {
+            font-size: vwD(14);
+            line-height: vwD(17);
+          }
+
+        }
+
+        &:nth-child(1) {
+          align-self: flex-start;
+          width: 136px;
+          height: 136px;
+
+          @include desktop() {
+            width: vwD(242);
+            height: vwD(242);
+          }
+
+          .circleIcon {
+            width: 100%;
+            height: 100%;
+
+            svg {
+              width: 136px;
+              height: 136px;
+
+              @include desktop() {
+                width: vwD(242);
+                height: vwD(242);
+              }
+            }
+          }
+
+          .text {
+            width: 88px;
+
+            @include desktop() {
+              width: vwD(90);
+            }
+          }
+
+        }
+
+        &:nth-child(2) {
+          margin-top: -34px;
+          align-self: flex-end;
+          width: 135px;
+          height: 135px;
+
+          @include desktop() {
+            margin-top: vwD(-201);
+            width: vwD(180);
+            height: vwD(180);
+          }
+
+          .circleIcon {
+            width: 100%;
+            height: 100%;
+
+            svg {
+              width: 135px;
+              height: 135px;
+
+              @include desktop() {
+                width: vwD(180);
+                height: vwD(180);
+              }
+            }
+          }
+
+          .text {
+            width: 110px;
+
+            @include desktop() {
+              width: vwD(118);
+            }
+          }
+
+
+        }
+
+        &:nth-child(3) {
+          margin-top: -62px;
+          width: 124px;
+          height: 124px;
+
+          @include desktop() {
+            margin-top: vwD(-13);
+            margin-left: vwD(220);
+            width: vwD(160);
+            height: vwD(160);
+          }
+
+          .circleIcon {
+            width: 100%;
+            height: 100%;
+
+            svg {
+              width: 124px;
+              height: 124px;
+
+              @include desktop() {
+                width: vwD(160);
+                height: vwD(160);
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+}

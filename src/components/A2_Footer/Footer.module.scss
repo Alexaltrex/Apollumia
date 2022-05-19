@@ -1,0 +1,229 @@
+@import "../../assets/scss/app";
+
+.footer {
+  border-top: $headerBorder;
+  position: relative;
+  z-index: 10;
+
+  .topBlock {
+    position: relative;
+    padding: 32px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include desktop() {
+      height: vwD(85);
+      padding: 0 vwD(30);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+
+      @include desktop() {
+        flex-direction: row;
+      }
+
+      .linkWrapper {
+
+        &:not(:first-child) {
+          margin-top: 16px;
+
+          @include desktop() {
+            margin-top: 0;
+            margin-left: vwD(30);
+          }
+        }
+
+        .link {
+          text-decoration: none;
+          font-size: 14px;
+          line-height: 150%;
+          text-transform: capitalize;
+
+          @include desktop() {
+            font-size: vwD(16);
+          }
+        }
+      }
+
+    }
+
+    .logoDesktop {
+      @include onlyDesktop() {
+        @include absoluteCenter();
+        width: vwD(257);
+        height: vwD(17);
+      }
+
+      svg {
+        width: vwD(257);
+        height: vwD(17);
+      }
+    }
+
+    .socialLinks {
+      display: flex;
+      flex-direction: column;
+
+      @include desktop() {
+        flex-direction: row;
+      }
+
+      .linkWrapper {
+
+        &:not(:first-child) {
+          margin-top: 16px;
+
+          @include desktop() {
+            margin-top: 0;
+            margin-left: vwD(30);
+          }
+        }
+
+        .link {
+          text-decoration: none;
+          font-size: 14px;
+          line-height: 150%;
+          text-transform: capitalize;
+
+          @include desktop() {
+            font-size: vwD(16);
+          }
+
+        }
+      }
+
+
+    }
+
+  }
+
+  .bottomBlock {
+    position: relative;
+    border-top: $headerBorder;
+    padding: 20px 20px 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include desktop() {
+      height: vwD(85);
+      padding: 0 vwD(30);
+      align-items: center;
+    }
+
+    .left {
+      .design {
+        @include onlyMobile();
+        font-size: 14px;
+        line-height: 150%;
+        color: #A5A5A5;
+
+        @include desktop() {
+          font-size: vwD(14);
+        }
+
+        a {
+          color: #FFF;
+          text-decoration: none;
+        }
+      }
+
+      .rights {
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 150%;
+        color: #A5A5A5;
+
+        @include desktop() {
+          font-size: vwD(14);
+        }
+      }
+    }
+
+    .designDesktop {
+      @include onlyDesktop();
+      @include absoluteCenter();
+      font-size: vwD(14);
+      line-height: 150%;
+      color: #A5A5A5;
+
+      .link {
+        display: inline-block;
+      }
+
+      a {
+        text-decoration: none;
+        color: #FFF;
+      }
+    }
+
+  }
+
+  .toTop {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover {
+      div {
+        background: #FFF;
+      }
+
+      svg path {
+        fill: #000;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 150%;
+      color: #FFF;
+
+      @include desktop() {
+        font-size: vwD(14);
+      }
+    }
+
+    & > div {
+      margin-left: 10px;
+      width: 26px;
+      height: 26px;
+      border: 1px solid #FFF;
+      border-radius: 50%;
+      background: #000;
+      transition: 0.3s;
+      @include centerRow();
+
+      @include desktop() {
+        margin-left: vwD(10);
+        width: vwD(26);
+        height: vwD(26);
+        border: vwD(1) solid #FFF;
+      }
+
+      svg {
+        width: 12px;
+        height: 12px;
+        transform: rotate(-90deg);
+
+        path {
+          transition: 0.3s;
+        }
+
+        @include desktop() {
+          width: vwD(12);
+          height: vwD(12);
+        }
+      }
+    }
+  }
+
+
+}
+

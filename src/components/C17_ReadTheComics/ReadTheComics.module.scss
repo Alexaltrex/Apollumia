@@ -1,0 +1,97 @@
+@import "../../assets/scss/app";
+
+.readTheComics {
+  position: relative;
+  border-top: $headerBorder;
+  height: 260px;
+  @include centerRow();
+
+  @include desktop() {
+    height: vwD(365);
+  }
+
+  .titleBlock {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+
+    &:hover + .frameWrapper {
+      transform: translate(-50%, -50%) rotate(15deg);
+    }
+
+    .link {
+      text-decoration: none;
+      @include Federo();
+      font-size: 26px;
+      line-height: 130%;
+      text-transform: uppercase;
+
+      @include desktop() {
+        font-size: vwD(80);
+      }
+    }
+
+    .arrowIcon {
+      position: absolute;
+      top: 50%;
+      right: -12px;
+      width: 21px;
+      height: 21px;
+      transform: translate(100%, -50%);
+
+      @include desktop() {
+        right: vwD(-40);
+        width: vwD(54);
+        height: vwD(54);
+      }
+
+      svg {
+        width: 21px;
+        height: 21px;
+
+        @include desktop() {
+          width: vwD(54);
+          height: vwD(54);
+        }
+      }
+
+    }
+  }
+
+  .frameWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(30deg);
+    transition: 0.3s;
+    z-index: 1;
+
+    .frame {
+      width: 97px;
+      height: 150px;
+      border: 1px solid #303030;
+
+      @include desktop() {
+        width: vwD(143);
+        height: vwD(220);
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-15deg);
+      display: block;
+      width: auto;
+      height: 150px;
+
+      @include desktop() {
+        //width: vwD(160);
+        height: vwD(220);
+      }
+    }
+  }
+
+
+}
